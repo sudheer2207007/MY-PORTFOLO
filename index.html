@@ -1,0 +1,631 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Venkata Sai Sudheer | Data Analyst & UI/UX Enthusiast</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Portfolio of G. Venkata Sai Sudheer - Data Analyst skilled in SQL, Power BI, MS Excel, and UI/UX design">
+    <meta name="keywords" content="Data Analyst, SQL, Power BI, Excel, UI/UX, Portfolio">
+    <meta name="author" content="Ganja Venkata Sai Sudheer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    
+    <!-- Custom CSS -->
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #00bfff;
+            --secondary-color: #ff6b6b;
+            --dark-bg: #1f1f1f;
+            --light-bg: #f8f9fa;
+            --text-light: #f8f9fa;
+            --text-dark: #212529;
+        }
+        
+        /* Header enhancements */
+        #header {
+            background: rgba(31, 31, 31, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Banner enhancements */
+        #banner {
+            background: linear-gradient(135deg, #1f1f1f 0%, #2c3e50 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #banner:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/dots-pattern.png') repeat;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        #banner .inner {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Skills section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 150px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skill-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        /* Project tiles enhancements */
+        .tiles article {
+            transition: transform 0.3s ease;
+        }
+        
+        .tiles article:hover {
+            transform: scale(1.03);
+        }
+        
+        .tiles article .image img {
+            transition: transform 0.5s ease;
+        }
+        
+        .tiles article:hover .image img {
+            transform: scale(1.1);
+        }
+        
+        /* Resume section */
+        .resume-section {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 4em 2em;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resume-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/dots-pattern.png') repeat;
+            opacity: 0.05;
+        }
+        
+        .resume-section .inner {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .resume-section .button {
+            margin: 0.5em;
+            transition: all 0.3s ease;
+        }
+        
+        .resume-section .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+        }
+        
+        .resume-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+            background-color: var(--light-bg);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+        }
+        
+        /* Contact form enhancements */
+        #contact {
+            background: linear-gradient(135deg, #2c3e50 0%, #1f1f1f 100%);
+        }
+        
+        .contact-method {
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Footer enhancements */
+        #footer {
+            background-color: #141414;
+        }
+        
+        /* Animation classes */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .skills-container {
+                gap: 1rem;
+            }
+            
+            .skill-card {
+                width: 120px;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+<!-- Google Tag Manager (optional) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <a href="index.html" class="logo"><strong>Sudheer</strong> <span>Portfolio</span></a>
+        <nav>
+            <a href="#menu" class="menu-toggle"><span>Menu</span></a>
+            <ul class="desktop-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="actions stacked">
+            <li><a href="#contact" class="button primary fit">Get In Touch</a></li>
+            <li><a href="assets/resume/Sudheer_Resume.pdf" class="button fit" target="_blank">Download Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major" data-aos="fade-up">
+                <h1>G. Venkata Sai Sudheer</h1>
+            </header>
+            <div class="content" data-aos="fade-up" data-aos-delay="100">
+                <p class="typewriter">
+                    Transforming data into actionable insights with 
+                    <span class="highlight">SQL</span>, 
+                    <span class="highlight">Power BI</span>, and 
+                    <span class="highlight">Excel</span>.
+                    <br />
+                    Passionate about <strong>UI/UX</strong> 
+                    <img src="https://i.gifer.com/7VE.gif" alt="UI UX" style="width:30px; vertical-align:middle;" />
+                </p>
+                <ul class="actions" data-aos="fade-up" data-aos-delay="200">
+                    <li><a href="#projects" class="button primary large next scrolly pulse">Explore My Work</a></li>
+                    <li><a href="#contact" class="button large next scrolly">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- About Section -->
+        <section id="about" class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+            <div class="content" data-aos="fade-right">
+                <h2>About Me</h2>
+                <p>I'm a detail-oriented Data Analyst with expertise in transforming complex datasets into meaningful insights. With a strong foundation in data visualization, statistical analysis, and database management, I help organizations make data-driven decisions.</p>
+                <p>My passion for UI/UX design complements my analytical skills, allowing me to create intuitive data presentations that resonate with stakeholders at all levels.</p>
+                <ul class="actions stacked">
+                    <li><a href="#skills" class="button scrolly">Learn More</a></li>
+                </ul>
+            </div>
+            <div class="image" data-aos="fade-left">
+                <img src="assets/images/profile.jpg" alt="Venkata Sai Sudheer" />
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="wrapper style1 align-center">
+            <div class="inner">
+                <h2 data-aos="fade-up">Technical Skills</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Here are the key technologies and tools I work with</p>
+                
+                <div class="skills-container">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fas fa-database"></i>
+                        <h4>SQL</h4>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Power BI</h4>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fas fa-file-excel"></i>
+                        <h4>MS Excel</h4>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fab fa-python"></i>
+                        <h4>Python</h4>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+                        <i class="fas fa-chart-pie"></i>
+                        <h4>Tableau</h4>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>UI/UX</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="tiles">
+            <article data-aos="fade-up">
+                <span class="image">
+                    <img src="assets/images/project1.jpg" alt="Banking Dashboard" />
+                </span>
+                <header class="major">
+                    <h3><a href="https://github.com/sudheer2207007/Banking-Dashboard" class="link" target="_blank">Banking Dashboard</a></h3>
+                    <p>Interactive Power BI dashboard with customer segmentation and financial KPIs</p>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Data Modeling</span>
+                    </div>
+                </header>
+            </article>
+            <article data-aos="fade-up" data-aos-delay="100">
+                <span class="image">
+                    <img src="assets/images/project2.jpg" alt="COVID Data Exploration" />
+                </span>
+                <header class="major">
+                    <h3><a href="https://github.com/sudheer2207007/COVID-Portfolio-Project---Data-Exploration" class="link" target="_blank">COVID Data Exploration</a></h3>
+                    <p>Comprehensive SQL analysis of global COVID-19 trends and vaccination rates</p>
+                    <div class="project-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">ETL</span>
+                    </div>
+                </header>
+            </article>
+            <article data-aos="fade-up" data-aos-delay="200">
+                <span class="image">
+                    <img src="assets/images/project3.jpg" alt="Amazon Web Scraper" />
+                </span>
+                <header class="major">
+                    <h3><a href="https://github.com/sudheer2207007/Amazon-Web-Scraper-Project" class="link" target="_blank">Amazon Web Scraper</a></h3>
+                    <p>Python script to collect and analyze product data with price tracking</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">BeautifulSoup</span>
+                        <span class="tag">Web Scraping</span>
+                    </div>
+                </header>
+            </article>
+            <article data-aos="fade-up" data-aos-delay="300">
+                <span class="image">
+                    <img src="assets/images/project4.jpg" alt="Bank EDA Version 1" />
+                </span>
+                <header class="major">
+                    <h3><a href="https://github.com/sudheer2207007/BankEDA-Version-1-" class="link" target="_blank">Bank Customer EDA</a></h3>
+                    <p>Exploratory analysis of banking dataset with customer behavior insights</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Data Visualization</span>
+                    </div>
+                </header>
+            </article>
+            <article data-aos="fade-up" data-aos-delay="400">
+                <span class="image">
+                    <img src="assets/images/project5.jpg" alt="Data Cleaning Project" />
+                </span>
+                <header class="major">
+                    <h3><a href="https://github.com/sudheer2207007/Data-Cleaning-Portfolio-Project-Queries" class="link" target="_blank">Data Cleaning Project</a></h3>
+                    <p>SQL scripts for transforming raw housing data into analysis-ready format</p>
+                    <div class="project-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Data Cleaning</span>
+                        <span class="tag">ETL</span>
+                    </div>
+                </header>
+            </article>
+            <article data-aos="fade-up" data-aos-delay="500">
+                <span class="image">
+                    <img src="assets/images/project6.jpg" alt="UI/UX Design Project" />
+                </span>
+                <header class="major">
+                    <h3><a href="#" class="link">Dashboard UI Design</a></h3>
+                    <p>Figma prototypes for analytics dashboard with user-centered design</p>
+                    <div class="project-tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Prototyping</span>
+                    </div>
+                </header>
+            </article>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="wrapper style1 align-center" style="background-color: var(--primary-color); color: white;">
+            <div class="inner">
+                <h2 data-aos="fade-up">By The Numbers</h2>
+                <div class="items style1 medium onscroll-fade-in" data-aos="fade-up">
+                    <section>
+                        <span class="icon solid style2 major fa-project-diagram"></span>
+                        <h3>15+</h3>
+                        <p>Projects Completed</p>
+                    </section>
+                    <section>
+                        <span class="icon solid style2 major fa-code"></span>
+                        <h3>10,000+</h3>
+                        <p>Lines of Code</p>
+                    </section>
+                    <section>
+                        <span class="icon solid style2 major fa-chart-line"></span>
+                        <h3>50+</h3>
+                        <p>Data Visualizations</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
+            <div class="inner">
+                <header class="major" data-aos="fade-up">
+                    <h2>My Professional Journey</h2>
+                    <p>Download my resume to view my complete work history, education, and certifications</p>
+                </header>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <a href="assets/resume/Sudheer_Resume.pdf" class="button primary icon solid fa-download" target="_blank">Download Resume</a>
+                    <a href="assets/resume/Sudheer_Resume.pdf" class="button icon solid fa-eye" target="_blank">View Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials wrapper style1 align-center">
+            <div class="inner">
+                <h2 data-aos="fade-up">What People Say</h2>
+                <div class="items style1 onscroll-fade-in">
+                    <section class="testimonial-card" data-aos="fade-up">
+                        <blockquote>
+                            "Sudheer's data analysis provided actionable insights that helped us optimize our marketing strategy. His visualizations made complex data accessible to our entire team."
+                        </blockquote>
+                        <div class="author">
+                            <h4>Marketing Director</h4>
+                            <p>ABC Corporation</p>
+                        </div>
+                    </section>
+                    <section class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <blockquote>
+                            "The dashboard Sudheer created for our sales team has become an indispensable tool for tracking performance and identifying growth opportunities."
+                        </blockquote>
+                        <div class="author">
+                            <h4>Sales Manager</h4>
+                            <p>XYZ Solutions</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="inner">
+            <section data-aos="fade-right">
+                <form method="post" action="#" id="contact-form">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required />
+                        </div>
+                        <div class="field">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="6" required></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" id="submit-btn" /></li>
+                        <li><input type="reset" value="Clear" /></li>
+                    </ul>
+                </form>
+            </section>
+            <section class="split" data-aos="fade-left">
+                <section>
+                    <div class="contact-method">
+                        <span class="icon solid alt fa-envelope"></span>
+                        <h3>Email</h3>
+                        <a href="mailto:sudheer@example.com">sudheer@example.com</a>
+                    </div>
+                </section>
+                <section>
+                    <div class="contact-method">
+                        <span class="icon solid alt fa-phone"></span>
+                        <h3>Phone</h3>
+                        <span>+91-XXXXXXXXXX</span>
+                    </div>
+                </section>
+                <section>
+                    <div class="contact-method">
+                        <span class="icon solid alt fa-home"></span>
+                        <h3>Location</h3>
+                        <span>Pamarru, East Godavari<br />
+                        Andhra Pradesh – 533305, India</span>
+                    </div>
+                </section>
+                <section>
+                    <div class="contact-method">
+                        <span class="icon solid alt fa-clock"></span>
+                        <h3>Availability</h3>
+                        <span>Monday - Friday: 9am - 5pm IST<br />
+                        Weekends: By appointment</span>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="https://twitter.com/yourprofile" class="icon brands alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                <li><a href="https://linkedin.com/in/yourprofile" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/sudheer2207007" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                <li><a href="https://medium.com/yourprofile" class="icon brands alt fa-medium" target="_blank"><span class="label">Medium</span></a></li>
+                <li><a href="https://dribbble.com/yourprofile" class="icon brands alt fa-dribbble" target="_blank"><span class="label">Dribbble</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; <span id="year"></span> Venkata Sai Sudheer</li>
+                <li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+                <li>Images: <a href="https://unsplash.com" target="_blank">Unsplash</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- AOS Animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Custom JS -->
+<script>
+    // Initialize AOS animation
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+    
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Form submission handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('submit-btn');
+        submitBtn.value = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(function() {
+            submitBtn.value = 'Message Sent!';
+            setTimeout(function() {
+                submitBtn.value = 'Send Message';
+                submitBtn.disabled = false;
+                document.getElementById('contact-form').reset();
+            }, 2000);
+        }, 1500);
+    });
+    
+    // Smooth scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (document.getElementById('menu').style.display === 'block') {
+                    document.getElementById('menu').style.display = 'none';
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
